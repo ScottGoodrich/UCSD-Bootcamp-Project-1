@@ -1,0 +1,44 @@
+body {
+   background: url(../assets/prism.png);
+   color: white;
+}
+
+h1 {
+   font-family: 'Montserrat Subrayada', sans-serif;
+   font-size: 100px;
+   font-weight: bold;
+   color: #19f8ff;
+}
+
+h3 {
+   font-family: 'Oswald', sans-serif;
+   font-size: 60px;
+   color: #ffd800;
+}
+ 
+a {
+   font-family: 'Oswald', sans-serif;
+   font-size: 22px;
+   color: #ffd900;
+   padding: 10px;
+}
+
+hr {
+   border: 1.5px solid #ffd900;
+   width: 100%;
+}
+
+ 
+label {
+   font-family: 'Oswald', sans-serif;
+   font-size: 20px;
+   color: #ffd900;
+}
+
+.nav-pills>li>a.active,
+.nav-pills>li>a:hover,
+.nav-pills>li>a:focus {
+   background-color: black!important;
+   color: #19f8ff!important;
+}
+
