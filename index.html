@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        SoundTracker
+    </title>
+
+    <link rel='stylesheet' type='text/css' href='styles/reset.css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- SOUNDTRACKER TITLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+    <link rel='stylesheet' type='text/css' href='styles/style.css'>
+    <link rel='stylesheet' type='text/css' href='index.css'>
+</head>
+
+<body>
+    <div class="container">
+    <div class="main">
+        <div class="">
+            <h1>SoundTracker</h1>
+        </div>
+
+        <div class=" search-bar">
+            <nav>
+                <div class="nav-wrapper white lighten-1">
+                    <form>
+                        <div class="input-field">
+                            <input id="search" type="search" required placeholder="ENTER ARTIST HERE">
+                            <label class="label-icon" for="search">
+                            <i class="material-icons">search</i>
+                            </label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </div>
+            </nav>  
+        </div>
+
+        <!-- nav bar goes here -->
+        <div class="navBar">
+            <hr>
+            <ul class="nav nav-pills">
+                <li role="presentation" class=""><a href="#artist-info">ARTIST BIO</a></li>
+                <li role="presentation"><a href="#event-info">TOUR DATES</a></li>
+                <li role="presentation"><a href="#disco-info">DISCOGRAPHY</a></li>
+                <li role="presentation"><a href="#lyrics-info">LYRICS SEARCH</a></li>
+            </ul>
+        </div>
+
+        <div class="">
+            <hr> 
+        </div>
+    </div>
+
+    <!-- <div id="welcome">
+        random holder
+    </div> -->
+
+
+    <!-- display artist info -->
+    <div id="artist-info"> 
+        <div id="artist-name"></div>
+        <div id="artist-detail"></div>
+    </div>
+    
+    <!-- display artist info -->
+    <div id="event-info"> </div>
+
+    <!-- discography info goes here -->
+    <div id="disco-info"> </div>
+
+    <!-- lyrics info goes here -->
+    <div id="lyrics-info"> </div>
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
