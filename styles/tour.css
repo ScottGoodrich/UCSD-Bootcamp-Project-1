@@ -62,8 +62,8 @@ hr {
     color: #ffd900;
     margin-top: 40px;
 }
-p {
+#logo-div {
     font-family: 'Oswald', sans-serif;
-    font-size: 30px;
-    color: #00cec8;
+    font-size: 45px;
+    color: #d9f5f4;
 }
