@@ -13,7 +13,7 @@ $(document).ready(function () {
                 dataType: "json",
             }).then(function(response) {
                 console.log(response);
-                var artistName = $("<h1>").text(input);
+                var artistName = $("<h1>").text(input).addClass("artistName");
                 var artistImage = $("<img>").attr("src", response._embedded.attractions[0].images[0].url).addClass("artistImage");
                 // $("#artist-icons").show();
     
