@@ -29,11 +29,14 @@ $(document).on("keypress", "#search", function(event) {
 
 // Pull album info from musicbrainz 
 $("#disco-button").click(function searchDiscography() {
+    console.log("DISCOGRAPHY BUTTON CLICKED");
+    $("#artist-info").empty();
+    $("#event-info2").empty();
     // TEST Query result
     // var queryURL2 = "http://musicbrainz.org/ws/2/artist/9fff2f8a-21e6-47de-a2b8-7f449929d43f?inc=releases&fmt=json";
     
     // WANT TO USE THIS BUT NEED TO GET artistMBID var
-    var queryURL2 = "http://musicbrainz.org/ws/2/artist/" + artistMBID + "?inc=releases&fmt=json";
+    var queryURL2 = "https://musicbrainz.org/ws/2/artist/" + artistMBID + "?inc=releases&fmt=json";
     
     // Ajax GET method to get response info for albums
     $.ajax({
@@ -45,16 +48,16 @@ $("#disco-button").click(function searchDiscography() {
 
         var albums = response.releases;
         // var artistID = response.id;
-        var albumName = $("<h4>").text(albums[0].title);
+        var albumName = $("<h3>").text(albums[0].title);
         
         // FOR loop to run through the list of albums
         for (i = 0; i < albums.length; i++) {
             console.log(albums[i].title);
-            var albumName = $("<h5>").text(albums[i].title);
+            var albumName = $("<li>").text(albums[i].title);
             
             // Append to  #disco-info div   ****NEED TO WORK ON THIS****
 
-            $("#disco-table").append('<button type="button" class="list-group-item">' + albumName + '</button>');
+            $("#disco-info").append(albumName);
         };
     });
 });
