@@ -19,7 +19,7 @@
 }
 
 .artistName,
-h1 {
+#artist-name {
    text-align: center;
 }
 
