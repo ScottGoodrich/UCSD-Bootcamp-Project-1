@@ -4,6 +4,7 @@ var artistMBID;
 // Function to empty page once page loads
 $(document).ready(function emptyPage() {
     $("#disco-info").empty();
+    var discoTableDIV = $("<table>")
 
 // PULL MBID FROM BANDSINTOwN
 $(document).on("keypress", "#search", function(event) {
@@ -20,7 +21,6 @@ $(document).on("keypress", "#search", function(event) {
         console.log(artistID);
         console.log(response.mbid);
         artistMBID = response.mbid;
-        
     })
     }
 });
@@ -53,11 +53,10 @@ $("#disco-button").click(function searchDiscography() {
         // FOR loop to run through the list of albums
         for (i = 0; i < albums.length; i++) {
             console.log(albums[i].title);
-            var albumName = $("<li>").text(albums[i].title);
-            
+            var albumName = $("<h4>").append(albums[i].title);
             // Append to  #disco-info div   ****NEED TO WORK ON THIS****
 
-            $("#disco-info").append(albumName);
+            $("#disco-table > tbody > tr").append("<td>" + albumName + "</td>");
         };
     });
 });
