@@ -1,9 +1,28 @@
+#artist-info {
+   margin-bottom: 40px;
+}
+
 .artistImage {
-   margin-left: 200px;
    height: 400px;
    width: 500px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
 }
 
 #artist-detail {
+   margin-top: 30px;
    margin-left: 270px;
+   display: block;
+   width: 50%;
+}
+
+.artistName,
+h1 {
+   text-align: center;
+}
+
+.artistImage {
+   border: 3px solid white;
 }

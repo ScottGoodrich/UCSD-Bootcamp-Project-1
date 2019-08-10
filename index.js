@@ -13,7 +13,7 @@ $(document).ready(function () {
                 dataType: "json",
             }).then(function(response) {
                 console.log(response);
-                var artistName = $("<h1>").text(input);
+                var artistName = $("<h1>").text(input).addClass("artistName");
                 var artistImage = $("<img>").attr("src", response._embedded.attractions[0].images[0].url).addClass("artistImage");
                 // $("#artist-icons").show();
     
@@ -23,6 +23,7 @@ $(document).ready(function () {
                     var youTube = response._embedded.attractions[0].externalLinks.youtube[0].url;
                     var youTubeButton= $("<a><img src='assets/yt.png' width='100' height='100''>").attr("href",youTube).attr("target", "_blank");
                 }
+                //else statements not quite working
                 // else {
                 //     $("#youtube-link").addClass("unavailable");
                 //     $("#youtube-link").attr("href", "javascript:void(0);");
