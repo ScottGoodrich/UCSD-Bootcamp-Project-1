@@ -19,10 +19,10 @@
 }
 
 .artistName,
-h1 {
+#artist-name {
    text-align: center;
 }
 
 .artistImage {
-   border: 3px solid white;
+   border: 4px solid white;
 }
