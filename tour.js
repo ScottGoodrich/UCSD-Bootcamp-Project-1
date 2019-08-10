@@ -12,8 +12,9 @@
         $("#artist-name").empty();
         $("#artist-detail").empty();
         $("#event-info").empty();
+        $("#logo-div").empty();
         $("#disco-info").empty();
-        $("#lyrics-info").empty();
+        $("#similar-info").empty();
         var newTable = $('<table>');
 
         //return an alert if artist is not currently on tour
@@ -28,7 +29,7 @@
                 for (var i = 0; i < 3; i++) {
                     concertRow.append("<td>" + response[tourDate].datetime + "<br>" +
                         response[tourDate].venue.name + "<br>" +
-                        response[tourDate].venue.city + "<br>" +
+                        response[tourDate].venue.city + " " +
                         response[tourDate].venue.region + "<br>" +
                         response[tourDate].venue.country + "<br></td>");
                     tourDate++;
@@ -36,8 +37,8 @@
                 newTable.append(concertRow);
             }
             $("#event-info").html(newTable);
-            $("#logo-div").append('<p class="col-sm-6">Powered By Bandsintown</p>');
-            $("#logo-div").append('<img style="size: 5em" class="col-sm-6" src="assets/hand+logo.png">');
+            $("#logo-div").append('<p class="col-sm-8">Powered By Bandsintown</p>');
+            $("#logo-div").append('<img style="size: 5em" class="col-sm-2" src="assets/hand+logo.png">');
         } 
     })
 })
