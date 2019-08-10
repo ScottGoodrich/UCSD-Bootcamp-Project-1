@@ -122,6 +122,6 @@ $(document).ready(function () {
             $("#similar-info").empty();
             $("#artist-name").append(artistName, artistImage);
             $("#artist-detail").append(youTubeButton, instagramButton, facebookButton);
-        })
-    })
-})
+        });
+    });
+});
