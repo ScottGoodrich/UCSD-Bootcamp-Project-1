@@ -23,6 +23,7 @@ $(document).ready(function () {
                     var youTube = response._embedded.attractions[0].externalLinks.youtube[0].url;
                     var youTubeButton= $("<a><img src='assets/yt.png' width='100' height='100''>").attr("href",youTube).attr("target", "_blank");
                 }
+                //else statements not quite working
                 // else {
                 //     $("#youtube-link").addClass("unavailable");
                 //     $("#youtube-link").attr("href", "javascript:void(0);");
