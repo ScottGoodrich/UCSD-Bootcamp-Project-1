@@ -11,12 +11,14 @@
     <link rel='stylesheet' type='text/css' href='styles/reset.css'>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- SOUNDTRACKER TITLE FONT -->
+    
+  <!-- SOUNDTRACKER TITLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    
+  
+<!--global and individual style sheets    -->
     <link rel='stylesheet' type='text/css' href='styles/style.css'>
     <link rel='stylesheet' type='text/css' href='index.css'>
     <link rel='stylesheet' type='text/css' href='styles/tour.css'>
@@ -49,10 +51,11 @@
         <div class="navBar">
             <hr>
             <ul class="nav nav-pills">
-                <li role="presentation" class=""><a href="#bio" id="artist-button">ARTIST BIO</a></li>
-                <li role="presentation"><a href="#tour" id="event-info-button">TOUR DATES</a></li>
+                <li role="presentation" class=""><a href="#bio" id="artist-button">ARTIST INFO</a></li>
+                <li role="presentation"><a href="#tour" class="event-info-button">TOUR DATES</a></li>
                 <li role="presentation"><a href="#disco" id="disco-button">DISCOGRAPHY</a></li>
                 <li role="presentation"><a href="#similar-artists" id="similar-artists-button">SIMILAR ARTISTS</a></li>
+
             </ul>
         </div>
 
@@ -68,14 +71,28 @@
         <div id="artist-detail"></div>
     </div>
     
-    <!-- display artist info.. scott will have his own html file --> 
-    <div id="event-info2"> 
+
+    <!-- display tour info -->
+    <div id="event-info2" class="container">
         <div id="event-info"></div>
-	    <div id="logo-div" class="row"></div>
+        <div id="logo-div" class="row"></div>
     </div>
 
     <!-- discography info goes here -->
-    <div id="disco-info"></div>
+
+    <div id="disco-info">
+        <!-- <table class="table table-hover" id="disco-table">
+            <thead>
+                <tr>
+                    <th>Album releases</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>  -->
+    </div>
 
     <!-- lyrics info goes here -->
     <div id="similar-info"></div>
@@ -85,6 +102,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="tour.js"></script>
+    <script type="text/javascript" src="discogjs.js"></script>
+
+
 
 </body>
 </html>
