@@ -11,6 +11,7 @@
         console.log(response);
         $("#artist-name").empty();
         $("#artist-detail").empty();
+        $("#artist-bio").empty();
         $("#event-info").empty();
         $("#logo-div").empty();
         $("#disco-info").empty();
