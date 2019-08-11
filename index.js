@@ -61,14 +61,13 @@ $(document).ready(function () {
                 method: "GET"
             }).then(function(response) {
                 console.log(response);
-                var artistBio = $("<div id='target' style='overflow: scroll; width: 100%; height: 200px;'>.").text(response.artist.bio.content);
+                var artistBio = $("<div id='target' style='overflow: scroll; width: 100%; height: 200px;'>.").html(response.artist.bio.content);
                 
-                $("#artist-bio").prepend(artistBio);
+                $("#artist-bio").append(artistBio);
                 
         })
     }
     })
-
 
 
 
@@ -132,9 +131,9 @@ $(document).ready(function () {
             method: "GET"
         }).then(function(response) {
             console.log(response);
-            var artistBio = $("<div id='target' style='overflow: scroll; width: 100%; height: 200px;'>.").text(response.artist.bio.content);
+            var artistBio = $("<div id='target' style='overflow: scroll; width: 100%; height: 200px;'>.").html(response.artist.bio.content);
            
-            $("#artist-bio").prepend(artistBio);
+            $("#artist-bio").append(artistBio);
     })
 
 })
