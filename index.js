@@ -124,7 +124,7 @@ $(document).ready(function () {
         })
         
         var input = $("#search").val().trim();
-        var queryURL2 = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + input + "&api_key=6d33317e3983483a5e8cf49901e8dcad&format=json";
+        var queryURL2 = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + input + "&api_key=6d33317e3983483a5e8cf49901e8dcad&format=json";
         
         // Ajax GET method to pull info
         $.ajax({
