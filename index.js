@@ -50,6 +50,23 @@ $(document).ready(function () {
                 //     $("#facebook-link").addClass("unavailable");
                 //     $("#facebook-link").attr("href", "javascript:void(0);");
                 // }
+                $("#artist-name").prepend(artistName);
+                $("#artist-name").append(artistImage);
+                $("#artist-detail").append(youTubeButton, instagramButton, facebookButton);
+                
+            })
+            
+            var input = $("#search").val().trim();
+            var queryURL2 = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + input + "&api_key=6d33317e3983483a5e8cf49901e8dcad&format=json";
+            console.log("similar artists button clicked");
+            
+            // Ajax GET method to pull info
+            $.ajax({
+                url: queryURL2,
+                method: "GET"
+            }).then(function(response) {
+                console.log(response);
+                var artistBio = $("<div id='target' style='overflow: scroll; width: 100%; height: 200px;'>.").text(response.artist.bio.content);
                 $("#artist-name").empty();
                 $("#artist-detail").empty();
                 $("#artist-icons").empty();
@@ -57,12 +74,11 @@ $(document).ready(function () {
                 $("#logo-div").empty();
                 $("#disco-info").empty();
                 $("#similar-info").empty();
-                $("#artist-name").append(artistName, artistImage);
-                $("#artist-detail").append(youTubeButton, instagramButton, facebookButton);
-            })
-        }
+               
+                $("#artist-bio").prepend(artistBio);
+        })
+    }
     })
-
 
 
 
@@ -114,6 +130,24 @@ $(document).ready(function () {
             //     $("#facebook-link").addClass("unavailable");
             //     $("#facebook-link").attr("href", "javascript:void(0);");
             // }
+
+            $("#artist-name").prepend(artistName);
+            $("#artist-name").append(artistImage);
+            $("#artist-detail").append(youTubeButton, instagramButton, facebookButton);
+            
+        })
+        
+        var input = $("#search").val().trim();
+        var queryURL2 = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + input + "&api_key=6d33317e3983483a5e8cf49901e8dcad&format=json";
+        console.log("similar artists button clicked");
+        
+        // Ajax GET method to pull info
+        $.ajax({
+            url: queryURL2,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response);
+            var artistBio = $("<div id='target' style='overflow: scroll; width: 100%; height: 200px;'>.").text(response.artist.bio.content);
             $("#artist-name").empty();
             $("#artist-detail").empty();
             $("#artist-icons").empty();
@@ -121,8 +155,13 @@ $(document).ready(function () {
             $("#logo-div").empty();
             $("#disco-info").empty();
             $("#similar-info").empty();
-            $("#artist-name").append(artistName, artistImage);
-            $("#artist-detail").append(youTubeButton, instagramButton, facebookButton);
-        })
+           
+            $("#artist-bio").prepend(artistBio);
     })
+
 })
+   
+});
+
+
+
