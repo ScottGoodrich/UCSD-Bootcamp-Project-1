@@ -1,8 +1,15 @@
 // Global variables go here
 var artistMBID;
+$("#artist-info").empty();
+$("#artist-name").empty();
+$("#artist-detail").empty();
+$("#event-info2").empty();
+$("#event-info").empty();
+$("#logo-div").empty();
+$("#similar-info").empty();
 
 // Function to empty page once page loads
-$(document).ready(function emptyPage() {
+// $(document).ready(function emptyPage() {
     // $("#disco-info").empty();
     
 // PULL MBID FROM BANDSINTOwN
@@ -52,16 +59,17 @@ $("#disco-button").click(function searchDiscography() {
         for (i = 0; i < albums.length; i++) {
             console.log(albums[i].title);
             var albumName = albums[i].title;
+            
             // Append to  #disco-info div   ****NEED TO WORK ON THIS****
             
             // Empty other divs and append
-            $("#artist-info").empty();
-            $("#artist-name").empty();
-            $("#artist-detail").empty();
-            $("#event-info2").empty();
-            $("#event-info").empty();
-            $("#logo-div").empty();
-            $("#similar-info").empty();
+            // $("#artist-info").empty();
+            // $("#artist-name").empty();
+            // $("#artist-detail").empty();
+            // $("#event-info2").empty();
+            // $("#event-info").empty();
+            // $("#logo-div").empty();
+            // $("#similar-info").empty();
             // $("#disco-info2").append('<table class="table table-hover" id="disco-table">');
             // $("#disco-table").append('<thead>');
             // $("#disco-table-head").append('<tr>');
@@ -70,7 +78,7 @@ $("#disco-button").click(function searchDiscography() {
         };
     });
 });
-});
+// });
 
 
 
