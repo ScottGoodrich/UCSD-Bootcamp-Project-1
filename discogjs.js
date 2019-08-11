@@ -1,16 +1,6 @@
 // Global variables go here
 var artistMBID;
-$("#artist-info").empty();
-$("#artist-name").empty();
-$("#artist-detail").empty();
-$("#event-info2").empty();
-$("#event-info").empty();
-$("#logo-div").empty();
-$("#similar-info").empty();
 
-// Function to empty page once page loads
-// $(document).ready(function emptyPage() {
-    // $("#disco-info").empty();
     
 // PULL MBID FROM BANDSINTOwN
 $(document).on("keypress", "#search", function(event) {
@@ -32,15 +22,19 @@ $(document).on("keypress", "#search", function(event) {
 });
 
 
-
 // Pull album info from musicbrainz 
-$("#disco-button").click(function searchDiscography() {
+$("#disco-button").click(function() {
     console.log("DISCOGRAPHY BUTTON CLICKED");
+    $("#artist-info").empty();
+    $("#artist-name").empty();
+    $("#artist-bio").empty();
+    $("#artist-detail").empty();
+    $("#event-info2").empty();
+    $("#event-info").empty();
+    $("#logo-div").empty();
+    $("#similar-info").empty();
+    $("#disco-table-head").append("<tr><th>Album releases</th><tr>");
     
-    // TEST Query result
-    // var queryURL2 = "http://musicbrainz.org/ws/2/artist/9fff2f8a-21e6-47de-a2b8-7f449929d43f?inc=releases&fmt=json";
-    
-    // WANT TO USE THIS BUT NEED TO GET artistMBID var
     var queryURL2 = "https://musicbrainz.org/ws/2/artist/" + artistMBID + "?inc=releases&fmt=json";
     
     // Ajax GET method to get response info for albums
@@ -52,7 +46,6 @@ $("#disco-button").click(function searchDiscography() {
         console.log(response);
 
         var albums = response.releases;
-        // var artistID = response.id;
         var albumName = $("<h5>").text(albums[0].title);
         
         // FOR loop to run through the list of albums
@@ -61,36 +54,8 @@ $("#disco-button").click(function searchDiscography() {
             var albumName = albums[i].title;
             
             // Append to  #disco-info div   ****NEED TO WORK ON THIS****
-            
-            // Empty other divs and append
-            // $("#artist-info").empty();
-            // $("#artist-name").empty();
-            // $("#artist-detail").empty();
-            // $("#event-info2").empty();
-            // $("#event-info").empty();
-            // $("#logo-div").empty();
-            // $("#similar-info").empty();
-            // $("#disco-info2").append('<table class="table table-hover" id="disco-table">');
-            // $("#disco-table").append('<thead>');
-            // $("#disco-table-head").append('<tr>');
-            
             $("#disco-body").append("<tr><td>" + albumName + "</td></tr>");
+            
         };
     });
 });
-// });
-
-
-
-//     $("#search").on("click", function(event) {
-//         event.preventDefault();
-//         var inputArtist = $("#search").val().trim();
-//         searchDiscography(inputArtist);
-// })
-
-// });
-// });
-
-// ========  NOTES  ==========
-// step 1: go on bandsintown and grab mbid for artist
-// step 2: go on musicbrainz, pull neccessary info// Global variables go here
