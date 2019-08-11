@@ -2,13 +2,23 @@
    margin-bottom: 40px;
 }
 
+#artist-bio {
+   margin-top: 20px;
+}
+
 .artistImage {
+   clear: both;
    height: 400px;
    width: 500px;
-   display: block;
+   /* display: block;
    margin-left: auto;
    margin-right: auto;
-   width: 50%;
+   width: 50%; */
+}
+
+#target {
+   background-color: rgb(0, 0, 0, 0.6);
+   padding: 15px;
 }
 
 #artist-detail {
