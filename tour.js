@@ -11,6 +11,7 @@
         console.log(response);
         $("#artist-name").empty();
         $("#artist-detail").empty();
+        $("#artist-bio").empty();
         $("#event-info").empty();
         $("#logo-div").empty();
         $("#disco-info").empty();
@@ -37,8 +38,8 @@
                 newTable.append(concertRow);
             }
             $("#event-info").html(newTable);
-            $("#logo-div").append('<p class="col-sm-8">Powered By Bandsintown</p>');
             $("#logo-div").append('<img style="size: 5em" class="col-sm-2" src="assets/hand+logo.png">');
+            $("#logo-div").append('<p class="col-sm-8">Powered By Bandsintown</p>');
         } 
     })
 })
