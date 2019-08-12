@@ -45,6 +45,5 @@
     })
 })
 $(".material-icons").on("click", function() {
-    console.log("search bar cleared");
     $("#search").val("");
 })
