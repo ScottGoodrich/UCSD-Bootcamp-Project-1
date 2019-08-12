@@ -9,7 +9,8 @@ $(document).ready(function () {
             $("#artist-icons").empty();
             $("#event-info").empty();
             $("#logo-div").empty();
-            $("#disco-info").empty();
+            $("#disco-table-head").empty();
+            $("#disco-body").empty();
             $("#similar-info").empty();
             var input = $("#search").val().trim();
             var queryURL = "https://app.ticketmaster.com/discovery/v2/attractions.json?keyword=" + input + "&apikey=xwUI0GkDheBWJnroGGqQsxnOUKENdh4p";
@@ -79,7 +80,8 @@ $(document).ready(function () {
         $("#artist-icons").empty();
         $("#event-info").empty();
         $("#logo-div").empty();
-        $("#disco-info").empty();
+        $("#disco-table-head").empty();
+        $("#disco-body").empty();
         $("#similar-info").empty();
         var input = $("#search").val().trim();
         var queryURL = "https://app.ticketmaster.com/discovery/v2/attractions.json?keyword=" + input + "&apikey=xwUI0GkDheBWJnroGGqQsxnOUKENdh4p";
