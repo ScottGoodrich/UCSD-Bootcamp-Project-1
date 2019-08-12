@@ -31,6 +31,8 @@ $("#disco-button").click(function() {
     $("#artist-detail").empty();
     $("#event-info").empty();
     $("#logo-div").empty();
+    $("#disco-table-head").empty();
+    $("#disco-body").empty();
     $("#similar-info").empty();
     $("#disco-table-head").append("<tr><th>Album releases</th><tr>");
     
