@@ -6,6 +6,7 @@ var artistMBID;
 $(document).on("keypress", "#search", function(event) {
     // IF statement - when [Enter] is pressed...
     if (event.keyCode === 13) {
+
     var artist = $("#search").val().trim();
     var artistID = "https://rest.bandsintown.com/artists/" + artist + "?app_id=codingbootcamp";
     
@@ -25,11 +26,9 @@ $(document).on("keypress", "#search", function(event) {
 // Pull album info from musicbrainz 
 $("#disco-button").click(function() {
     console.log("DISCOGRAPHY BUTTON CLICKED");
-    $("#artist-info").empty();
     $("#artist-name").empty();
     $("#artist-bio").empty();
     $("#artist-detail").empty();
-    $("#event-info2").empty();
     $("#event-info").empty();
     $("#logo-div").empty();
     $("#similar-info").empty();

@@ -1,3 +1,8 @@
+#disco-info2 {
+    margin-top: -60px;
+}
+
+
 #disco-table-head {
     border: 2px solid black;
     background-color: rgba(0, 0, 0, 0.6);
@@ -8,10 +13,10 @@ tr {
 }
 
 th {
-    color: #ffd900;
+    color: #19f8ff;
     font-weight: bolder;
     font-family: 'Montserrat Subrayada', sans-serif;
-    font-size: 24px;
+    font-size: 38px;
 }
 
 td {
