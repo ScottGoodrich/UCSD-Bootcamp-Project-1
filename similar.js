@@ -25,20 +25,23 @@ $(document).ready(function () {
             
             var a = response.similarartists.artist;
             var array = [a[0].name, a[1].name, a[2].name, a[3].name, a[4].name, a[5].name, a[6].name, a[7].name, a[8].name, a[9].name];
-       
-            var b = $("<div class='sim'>").html("<h3><u> 10 Similar Artists");
+            
+            
+
+            var b = $("<div class='sim'>").html("<h3>10 Similar Artists<hr>");
             $("#similar-info").append(b);
     
             // used loDash to console log 10 similar artists and append to div
             _.each(array, function (artists) {
                 console.log(artists);
-                var c= $("<div class='sim'>").append("<ul").append("<li>" + artists);
+                var c = $("<div class='sim'>").append("<ul").append("<li>" + artists).append();
                 $("#similar-info").append(c);
             })
+        
                 
     
         })
     
     })
-    });
+});
      
