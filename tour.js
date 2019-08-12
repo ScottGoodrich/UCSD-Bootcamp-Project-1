@@ -14,7 +14,8 @@
         $("#artist-bio").empty();
         $("#event-info").empty();
         $("#logo-div").empty();
-        $("#disco-info").empty();
+        $("#disco-body").empty();
+        $("#disco-table-head").empty();
         $("#similar-info").empty();
         var newTable = $('<table>');
 
@@ -44,6 +45,5 @@
     })
 })
 $(".material-icons").on("click", function() {
-    console.log("search bar cleared");
     $("#search").val("");
 })
